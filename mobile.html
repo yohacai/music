@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+	<meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0' name='viewport' />
+   <meta content='yes' name='apple-mobile-web-app-capable' />
+  <meta content='black' name='apple-mobile-web-app-status-bar-style' />
+   <meta content='telephone=no' name='format-detection' />
+   <meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+
+</head>
+<body>
+<div style="width: 200px;height: 20px" id='voice'></div>
+<br/>
+<input type="text" id="search"><button id="seBu" style="width:100px;height:30px;">搜索</button>
+<div>音量:<input type="text" id="vol"><button id="volBu" style="width:100px;height:30px;">确定</button></div>
+<button id="play" style="width:100px;height:30px;">播放/暂停</button>
+<div>
+	<button id="random" style="width:100px;height:30px;">随机播放</button>
+	<button id="left" style="width:100px;height:30px;"><<<</button>
+	<button id="right" style="width:100px;height:30px;">>>></button>
+</div>
+<section id="resWrap">
+	
+</section>
+     <script src="static/js/jquery.js"></script>
+  <script src="static/js/jquery-slider-bar.js"></script>
+<script src='static/js/mobile.js'></script>
+<script>
+function getCookie(c_name)
+{
+if (document.cookie.length>0)
+  {
+  c_start=document.cookie.indexOf(c_name + "=")
+  if (c_start!=-1)
+    { 
+    c_start=c_start + c_name.length+1 
+    c_end=document.cookie.indexOf(";",c_start)
+    if (c_end==-1) c_end=document.cookie.length
+    return unescape(document.cookie.substring(c_start,c_end))
+    } 
+  }
+return ""
+}
+	$("#voice").sliderBar();
+	$("#voice").onchange(function(){
+		$("#vol").val(parseFloat($("#voice").attr("value")).toFixed(2));
+		$("#volBu").trigger("touchstart");
+	});
+	if(!getCookie('pass')){
+	var pass = prompt("Please input password!");
+	if(pass!="yoha")
+		$("body").html(" ");
+	else
+		{
+var exdate=new Date();
+exdate.setDate(exdate.getDate()+30);
+document.cookie='pass'+ "=" +'1'+";expires="+exdate.toGMTString();
+		}
+	}
+</script>
+</body>
+
+
+</html>

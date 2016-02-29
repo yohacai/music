@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+ <title>Yoha Music</title>
+ <link rel="stylesheet" href="static/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+ <link rel="stylesheet" href="static/css/index.css" />
+   <link href="favicon.ico" rel="shortcut icon" />
+  <script src="static/js/jquery.js"></script>
+ <script src="static/js/musicListener.js"></script>
+  <script src="static/js/music.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+</head>
+<body>
+<label style="font-size:45px;color:#99CC99;position:absolute;left:10px;top:10px;">Y<font color='#FFCC99'>o</font>h<font color='#CCCC33'>a</font>音<font color='#FFCC33'>乐</font></label>
+<article id="main">
+  <section id="nav"></section>
+     <aside id="musicWrap">
+	    <article id="musicBody">
+		   <i class="fa fa-search icon fa-lg" id="search"></i>
+		   <section id="music">
+		      <img src="static/img/mayday.jpg" id="musicImg"/>
+			  <section id="cd"></section>
+		   </section>
+		   <li id="repeat" state="frozen" class="fa fa-repeat icon repeat fa-lg" title="单曲循环"></li>
+		   <li id="random" state="frozen" class="fa fa-random icon random fa-lg" title="随机播放"></li>
+		   <section id="voiceWrap"><input type="range" min="0" max="1" step="0.00001" value="0.5" id="voiceC"/></section>
+		   <header id="content">
+              <label id="musicName">后青春期的诗</label>
+		      <label id="singer">五月天</label>
+		   </header>
+		   <i id="voice" class="fa fa-volume-up icon voice"></i>
+		   <input id="volume" name="volume" min="0" max="1" step="0.00001" type="range" value="0" />
+		   <label id="timeWrap"><label class="time nowTime">0:00</label><label class="time allTime">/4:45</label></label>
+		   <i class="fa fa-navicon icon fa-lg" id="listBu"></i>
+		   <section id="control">
+		      <i id="backward" class="fa fa-backward fa-2x icon controlBu" title="上一曲"></i>
+		      <i id="play" state="pause" class="fa fa-play fa-2x icon controlBu" title="播放/暂停"></i>
+			  <i id="forward" class="fa fa-forward fa-2x icon controlBu" title="下一曲"></i>
+		   </section>
+		   <article id="musicList" >
+		      <header id="listTop">
+			    <ul class="itemWrap">
+				   <li class="listItem songName">　歌曲</li>
+				   <li class="listItem songSinger">歌手</li>
+				   <li class="listItem songHandle">操作</li>
+				</ul>
+			  </header>
+			  <section id="listBody" >
+			  </section>
+		   </article>
+		</article>  
+	 </aside>
+	 <section style="position:absolute;margin-left:30%;display:none;z-index:0;" id="ani">
+	     <div style="text-align:center;clear:both;">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
+  <div class="wrapper">
+    <div class="border-circle" id="one"></div>
+    <div class="border-circle" id="two"></div>
+    <div class="background-circle" style="margin-left:30px;">
+      <div class="triangle-light"></div>
+      <div class="body"></div>
+      <span class="shirt-text">I</span>
+      <span class="shirt-text">&hearts;</span>
+      <span class="shirt-text">M</span>
+      <span class="shirt-text">u</span>
+      <span class="shirt-text">sic</span>
+      <div class="triangle-dark"></div>
+    </div>
+    <div class="head">
+      <div class="ear" id="left"></div>
+      <div class="ear" id="right"></div>
+      <div class="hair-main">
+        <div class="sideburn" id="left"></div>
+        <div class="sideburn" id="right"></div>
+        <div class="hair-top"></div>
+      </div>
+      <div class="face">
+        <div class="hair-bottom"></div>
+        <div class="nose"></div>
+        <div class="eye-shadow" id="left">
+          <div class="eyebrow"></div>
+          <div class="eye"></div>
+        </div>
+        <div class="eye-shadow" id="right">
+          <div class="eyebrow"></div>
+          <div class="eye"></div>
+        </div>
+        <div class="mouth"></div>
+        <div class="shadow-wrapper">
+          <div class="shadow"></div>
+        </div>
+      </div>
+    </div>
+    <span class="music-note" id="one">&#9835;</span>
+    <span class="music-note" id="two">&#9834;</span>
+  </div>
+	 </section>
+	 <aside id="musicPage">
+<article style="width:100%;height:20%;margin-top:5%;position:relative">
+	    <section id="searchWrap">
+		   <input type="text" id="seInput" placeholder="请输入歌曲名或歌手名" />
+		   <button id="seBu">搜索</button>
+		</section>
+		  <i id="logo" style="position:absolute;left:320px;top:220px;color:#CCFF99" class="fa fa-music fa-5x"></i>
+		  <header id="seTop" >
+		  		<ul class="seItemWrap topTitle">
+				   <li class="seItem seName">　歌曲</li>
+				   <li class="seItem seSinger">歌手</li>
+				   <li class="seItem sePlay">播放</li>
+				   <li class="seItem seAdd">添加</li>
+				</ul>
+		  </header>
+</article>
+		<article id="seResult">
+		  <section id="resultWrap">
+		  		<!--<ul class="seItemWrap">
+				   <li class="seItem seName">后青春期的诗</li>
+				   <li class="seItem seSinger">五月天</li>
+				   <li class="seItem sePlay"><i class="fa fa-play-circle fa-lg listIcon"></i></li>
+				   <li class="seItem seAdd"><i class="fa fa-plus fa-lg listIcon"></i></li>
+				</ul>		-->
+			
+		  </section>
+		  
+		</article>
+	 </aside>
+  </article>
+<div id="playWraps"></div>   
+</body>
+<script src="static/js/commandGet.js"></script>
+</html>
